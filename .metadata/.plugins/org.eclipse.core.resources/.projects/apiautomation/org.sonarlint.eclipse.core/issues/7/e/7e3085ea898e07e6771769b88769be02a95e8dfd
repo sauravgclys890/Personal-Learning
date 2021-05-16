@@ -1,0 +1,19 @@
+
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ¥»™HÏ¸RMINORZ
+CODE_SMELL
+
+java:S1488"ZImmediately return this expression instead of assigning it to the temporary variable "id".(Ç É8Ì›ß¬±.HĞ¸RMINORZ
+CODE_SMELL
+s
+java:S1118":Add a private constructor to hide the implicit public one.(ûÚè‘øÿÿÿÿ8ã×ƒ®±.HÑ¸RMAJORZ
+CODE_SMELL
+}
+java:S1128"DRemove this unused import 'com.aventstack.extentreports.model.Test'.(Ëôóøşÿÿÿÿ8ã×ƒ®±.HÒ¸RMINORZ
+CODE_SMELL
+\	java:S108")Either remove or fill this block of code.(”ı¾8ã×ƒ®±.HÓ¸RMAJORZ
+CODE_SMELL
+N
+java:S2119"Save and re-use this "Random".(®ÌÕÖ8Ì›ß¬±.HÔ¸RCRITICALZBUG
+—
+java:S1488%"^Immediately return this expression instead of assigning it to the temporary variable "random".(ØÌ ­ùÿÿÿÿ8Ì›ß¬±.HÕ¸RMINORZ
+CODE_SMELL

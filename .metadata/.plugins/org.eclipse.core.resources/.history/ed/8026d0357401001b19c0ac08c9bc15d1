@@ -1,0 +1,19 @@
+package AAP.GitLabTest;
+
+public class PrimaryKey1 extends AbstractPK{
+
+	private String refinedPK;
+	
+	public PrimaryKey1(String refinedPK) {
+		super();
+		this.refinedPK = refinedPK;
+	}
+	
+	public String getRefinedPK() {
+		return refinedPK;
+	}
+	public void setRefinedPK(String refinedPK) {
+		this.refinedPK = refinedPK;
+	}
+
+}

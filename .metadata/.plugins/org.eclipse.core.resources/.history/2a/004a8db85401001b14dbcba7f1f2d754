@@ -1,0 +1,50 @@
+package AAP.testSVN;
+
+import java.io.File;
+
+import org.tmatesoft.svn.core.SVNCommitInfo;
+import org.tmatesoft.svn.core.SVNException;
+import org.tmatesoft.svn.core.SVNURL;
+import org.tmatesoft.svn.core.auth.ISVNAuthenticationManager;
+import org.tmatesoft.svn.core.io.SVNRepository;
+import org.tmatesoft.svn.core.io.SVNRepositoryFactory;
+import org.tmatesoft.svn.core.wc.ISVNOptions;
+import org.tmatesoft.svn.core.wc.SVNClientManager;
+import org.tmatesoft.svn.core.wc.SVNCommitClient;
+import org.tmatesoft.svn.core.wc.SVNWCUtil;
+
+public class testsvn {
+
+	public static void main(String[] args) {
+		try {
+			SVNURL url = SVNURL.parseURIDecoded("https://svn.netcracker.com/");
+			 SVNRepository repository = SVNRepositoryFactory.create(url, null);
+	           ISVNOptions myOptions = SVNWCUtil.createDefaultOptions(true);
+	           ISVNAuthenticationManager myAuthManager = SVNWCUtil
+	                   .createDefaultAuthenticationManager("sauk0719", "Advanced@2020");
+	              repository.setAuthenticationManager(myAuthManager);
+	              
+	              SVNClientManager clientManager = SVNClientManager.newInstance(
+	                      myOptions, myAuthManager);
+	              
+	              System.out.println(clientManager);
+	              SVNCommitClient commitClient = clientManager.getCommitClient();
+	              System.out.println(commitClient);
+	              File fileToCheckin = new File("‪C:\\Users\\sauk0719\\Desktop\\TA_WeeklyReport_Stats.xlsx");
+	              boolean recursive = true;       
+	             SVNCommitInfo importInfo = commitClient
+	                      .doImport(
+	                              fileToCheckin ,
+	                              SVNURL.parseURIDecoded("/TestAutomation/projects/AAP/aap-atp-executor/files/"),
+	                              "testing svn kit integration", recursive);
+	              System.out.println(importInfo.getNewRevision());
+		} catch (SVNException e) {
+			
+			e.printStackTrace();
+		}                    
+      
+
+
+	}
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6193" started-at="2020-07-14T21:29:22 IST" finished-at="2020-07-14T21:29:28 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6193" started-at="2020-07-14T21:29:22 IST" finished-at="2020-07-14T21:29:28 IST">
+      <class name="studentAPI.SerTest">
+        <test-method status="PASS" signature="baseTest()[pri:0, instance:studentAPI.SerTest@53f65459]" name="baseTest" is-config="true" duration-ms="992" started-at="2020-07-14T21:29:22 IST" finished-at="2020-07-14T21:29:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- baseTest -->
+        <test-method status="PASS" signature="serTest1()[pri:0, instance:studentAPI.SerTest@53f65459]" name="serTest1" duration-ms="4870" started-at="2020-07-14T21:29:24 IST" finished-at="2020-07-14T21:29:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serTest1 -->
+      </class> <!-- studentAPI.SerTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

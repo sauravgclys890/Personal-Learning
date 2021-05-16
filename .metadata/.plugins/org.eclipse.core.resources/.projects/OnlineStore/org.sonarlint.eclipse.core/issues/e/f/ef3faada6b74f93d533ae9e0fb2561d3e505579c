@@ -1,0 +1,13 @@
+
+l	java:S106."9Replace this use of System.out or System.err by a logger.(£ĞìÛ8ôøú—ó.H‰ªRMAJORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼ù+H‹ªRMINORZ
+CODE_SMELL
+q	java:S1066"9Replace this use of System.out or System.err by a logger.(•¬Ù‡ùÿÿÿÿ8ôøú—ó.HŒªRMAJORZ
+CODE_SMELL
+‰
+java:S1450"URemove the "driver" field and declare it as a local variable in the relevant methods.(Õú¨Š8ôøú—ó.HªRMINORZ
+CODE_SMELL
+
+java:S1128"FRemove this unused import 'org.openqa.selenium.firefox.FirefoxDriver'.(Úª ÿÿÿÿÿ8ˆ²˜ó.HŠªRMINORZ
+CODE_SMELL

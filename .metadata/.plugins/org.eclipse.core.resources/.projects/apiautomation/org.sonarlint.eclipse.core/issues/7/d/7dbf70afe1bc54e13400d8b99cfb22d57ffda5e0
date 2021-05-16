@@ -1,0 +1,16 @@
+
+†	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(־ח¾¶üÿÿÿÿ8הנפע´.H‎¸RMINORZ
+CODE_SMELL
+‡	java:S116
+"URename this field "total_page" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±©¼38הנפע´.H‏¸RMINORZ
+CODE_SMELL
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ùµ‰שHÿ¸RMINORZ
+CODE_SMELL
+†	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ת—ׂ—‏ÿÿÿÿ8הנפע´.H€¹RMINORZ
+CODE_SMELL
+†	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÜ²‎ÿÿÿÿ8הנפע´.H¹RMINORZ
+CODE_SMELL
+	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ֿß¶ב8הנפע´.H‚¹RMINORZ
+CODE_SMELL
+‹	java:S116"SRename this field "per_page" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾ון‡ÿÿÿÿÿ8הנפע´.Hƒ¹RMINORZ
+CODE_SMELL

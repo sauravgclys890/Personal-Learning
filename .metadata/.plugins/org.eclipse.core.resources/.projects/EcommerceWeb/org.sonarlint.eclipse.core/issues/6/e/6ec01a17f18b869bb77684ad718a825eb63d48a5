@@ -1,0 +1,8 @@
+
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ¥»™HßÅRMINORZ
+CODE_SMELL
+x	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Üâ‘HáÅRMINORZ
+CODE_SMELL
+j
+java:S1117""8Rename "wait" which hides the field declared at line 13.(Éá×­øÿÿÿÿHàÅRMAJORZ
+CODE_SMELL

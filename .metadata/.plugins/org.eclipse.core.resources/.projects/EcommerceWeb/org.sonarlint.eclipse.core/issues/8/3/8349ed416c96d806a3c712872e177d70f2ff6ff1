@@ -1,0 +1,29 @@
+
+l	java:S106e"9Replace this use of System.out or System.err by a logger.(àµüš8ÕµÍ³.HŸÈRMAJORZ
+CODE_SMELL
+y
+java:S1128"@Remove this unused import 'org.openqa.selenium.support.FindBys'.(şİê­ûÿÿÿÿ8Ò‘ï².HŞÅRMINORZ
+CODE_SMELL
+q	java:S106f"9Replace this use of System.out or System.err by a logger.(Ëö¯íşÿÿÿÿ8ÕµÍ³.H ÈRMAJORZ
+CODE_SMELL
+q	java:S106R"9Replace this use of System.out or System.err by a logger.(áÎ°ÿÿÿÿÿ8ËÚ‘ù².H¢ÆRMAJORZ
+CODE_SMELL
+q	java:S106Y"9Replace this use of System.out or System.err by a logger.(áÎ°ÿÿÿÿÿ8ËÚ‘ù².H¤ÆRMAJORZ
+CODE_SMELL
+}
+java:S1128"IRemove this unused import 'org.openqa.selenium.support.ui.WebDriverWait'.(¥÷ó8Ñ”úó².HÚÅRMINORZ
+CODE_SMELL
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›üÀ”HÙÅRMINORZ
+CODE_SMELL
+j
+java:S1153_"1Directly append the argument of String.valueOf().(Íµè—ùÿÿÿÿ8Ò˜Ğò².HİÅRMINORZ
+CODE_SMELL
+c
+java:S1068"*Remove this unused "driver" private field.(š…ŒÅøÿÿÿÿ8º¹ìë².HÛÅRMAJORZ
+CODE_SMELL
+d
+java:S1153b"1Directly append the argument of String.valueOf().(¿¶¦8ĞŠàñ².HÜÅRMINORZ
+CODE_SMELL
+k
+java:S1117S"7Rename "web" which hides the field declared at line 20.(ÇÊŒ8ËÚ‘ù².H£ÆRMAJORZ
+CODE_SMELL

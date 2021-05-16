@@ -1,0 +1,17 @@
+package AAP.GitLabTest;
+
+public class PrimaryKey extends AbstractPK{
+	public PrimaryKey(String stagingPK) {
+		super();
+		this.stagingPK = stagingPK;
+	}
+	private String stagingPK;
+    
+	public String getStagingPK() {
+		return stagingPK;
+	}
+	public void setStagingPK(String stagingPK) {
+		this.stagingPK = stagingPK;
+	}
+	
+}

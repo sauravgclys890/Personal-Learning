@@ -1,0 +1,33 @@
+
+Y
+java:S2386"Make this member "protected".(Çëùïÿÿÿÿÿ8Œ£ˆˆ°.Hû¹RMINORZVULNERABILITY
+l
+java:S1444"0Make this "public static propPreSet" field final(Çëùïÿÿÿÿÿ8Œ£ˆˆ°.Hü¹RMINORZVULNERABILITY
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ¥»™Hı¹RMINORZ
+CODE_SMELL
+T
+java:S2386"Make this member "protected".(¾¦ø8Œ£ˆˆ°.Hş¹RMINORZVULNERABILITY
+\	java:S108*")Either remove or fill this block of code.(”ı¾8¥„Ÿˆ°.Hÿ¹RMAJORZ
+CODE_SMELL
+l
+java:S1444
+"0Make this "public static fileandenv" field final(”İãÒÿÿÿÿÿ8Œ£ˆˆ°.H€ºRMINORZVULNERABILITY
+Y
+java:S2386
+"Make this member "protected".(”İãÒÿÿÿÿÿ8Œ£ˆˆ°.HºRMINORZVULNERABILITY
+’
+java:S1104
+"VMake fileandenv a static final constant or non-public and provide accessors if needed.(”İãÒÿÿÿÿÿ8Œ£ˆˆ°.H‚ºRMINORZVULNERABILITY
+R
+java:S1700
+"Rename field "fileandenv"(”İãÒÿÿÿÿÿ8Œ£ˆˆ°.HƒºRMAJORZ
+CODE_SMELL
+e
+java:S1444".Make this "public static propMain" field final(¾¦ø8Œ£ˆˆ°.H„ºRMINORZVULNERABILITY
+s
+java:S1118":Add a private constructor to hide the implicit public one.(ÄÓ¶•øÿÿÿÿ8Œ£ˆˆ°.H…ºRMAJORZ
+CODE_SMELL
+‹
+java:S1104"TMake propMain a static final constant or non-public and provide accessors if needed.(¾¦ø8Œ£ˆˆ°.H†ºRMINORZVULNERABILITY
+’
+java:S1104"VMake propPreSet a static final constant or non-public and provide accessors if needed.(Çëùïÿÿÿÿÿ8Œ£ˆˆ°.H‡ºRMINORZVULNERABILITY

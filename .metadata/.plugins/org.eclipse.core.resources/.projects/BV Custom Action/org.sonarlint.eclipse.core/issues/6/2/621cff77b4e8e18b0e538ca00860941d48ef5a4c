@@ -1,0 +1,13 @@
+
+^
+java:S1481",Remove this unused "request" local variable.(ÀþààøÿÿÿÿH·ÛRMINORZ
+CODE_SMELL
+b
+java:S1481".Remove this unused "testCases" local variable.(”Âˆû8ÜÇ¾Æ».HÑÛRMINORZ
+CODE_SMELL
+f
+java:S1172"-Remove this unused method parameter "tcName".(†à±úúÿÿÿÿ8Œ©ÌÆ».HÞÛRMAJORZ
+CODE_SMELL
+s
+java:S1144":Remove this unused private "parseTestcasesPropery" method.(†à±úúÿÿÿÿ8Œ©ÌÆ».HßÛRMAJORZ
+CODE_SMELL

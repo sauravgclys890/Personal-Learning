@@ -1,0 +1,34 @@
+package AAP.testSVN;
+
+import org.tmatesoft.svn.core.SVNException;
+import org.tmatesoft.svn.core.SVNURL;
+import org.tmatesoft.svn.core.auth.ISVNAuthenticationManager;
+import org.tmatesoft.svn.core.io.SVNRepository;
+import org.tmatesoft.svn.core.io.SVNRepositoryFactory;
+import org.tmatesoft.svn.core.wc.ISVNOptions;
+import org.tmatesoft.svn.core.wc.SVNClientManager;
+import org.tmatesoft.svn.core.wc.SVNWCUtil;
+
+public class testsvn {
+
+	public static void main(String[] args) {
+		try {
+			SVNURL url = SVNURL.parseURIDecoded("<path to the base svn repository>");
+			 SVNRepository repository = SVNRepositoryFactory.create(url, null);
+	           ISVNOptions myOptions = SVNWCUtil.createDefaultOptions(true);
+	           ISVNAuthenticationManager myAuthManager = SVNWCUtil
+	                   .createDefaultAuthenticationManager("<username>", "<password>");
+	              repository.setAuthenticationManager(myAuthManager);
+	              
+	              SVNClientManager clientManager = SVNClientManager.newInstance(
+	                      myOptions, myAuthManager);
+		} catch (SVNException e) {
+			
+			e.printStackTrace();
+		}                    
+      
+
+
+	}
+
+}

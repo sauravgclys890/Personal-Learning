@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20150" started-at="2020-07-08T18:29:54 IST" finished-at="2020-07-08T18:30:15 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20150" started-at="2020-07-08T18:29:54 IST" finished-at="2020-07-08T18:30:15 IST">
+      <class name="SeleniumFramework.EcommerceWeb.useCaseOne">
+        <test-method status="PASS" signature="confibBC()[pri:0, instance:SeleniumFramework.EcommerceWeb.useCaseOne@146044d7]" name="confibBC" is-config="true" duration-ms="4456" started-at="2020-07-08T18:29:55 IST" finished-at="2020-07-08T18:29:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- confibBC -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:SeleniumFramework.EcommerceWeb.useCaseOne@146044d7]" name="launchBrowser" is-config="true" duration-ms="7086" started-at="2020-07-08T18:29:59 IST" finished-at="2020-07-08T18:30:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="checkLowestPriceAndProductIncart()[pri:0, instance:SeleniumFramework.EcommerceWeb.useCaseOne@146044d7]" name="checkLowestPriceAndProductIncart" duration-ms="6327" started-at="2020-07-08T18:30:06 IST" finished-at="2020-07-08T18:30:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkLowestPriceAndProductIncart -->
+        <test-method status="PASS" signature="logoutApp()[pri:0, instance:SeleniumFramework.EcommerceWeb.useCaseOne@146044d7]" name="logoutApp" is-config="true" duration-ms="1" started-at="2020-07-08T18:30:13 IST" finished-at="2020-07-08T18:30:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutApp -->
+        <test-method status="PASS" signature="configAC()[pri:0, instance:SeleniumFramework.EcommerceWeb.useCaseOne@146044d7]" name="configAC" is-config="true" duration-ms="1906" started-at="2020-07-08T18:30:13 IST" finished-at="2020-07-08T18:30:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+      </class> <!-- SeleniumFramework.EcommerceWeb.useCaseOne -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

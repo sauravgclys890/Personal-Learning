@@ -1,0 +1,20 @@
+package AAP.GitLabTest;
+
+public class PrimaryKey {
+	private String stagingPK;
+    private String refinedPK;
+    
+	public String getStagingPK() {
+		return stagingPK;
+	}
+	public void setStagingPK(String stagingPK) {
+		this.stagingPK = stagingPK;
+	}
+	public String getRefinedPK() {
+		return refinedPK;
+	}
+	public void setRefinedPK(String refinedPK) {
+		this.refinedPK = refinedPK;
+	}
+
+}

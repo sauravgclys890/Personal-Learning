@@ -1,0 +1,195 @@
+package AAP.GitLabTest;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class LayerDataParser {
+	
+	private static final int TEST_CASE_COLUMN_INDEX = 0;
+	private static final int TEST_CASE_LAYER_COLUMN_INDEX = 1;
+    private static final String TEST_CASE_HEADER_START = "testCaseName";
+    private static final int STAGING_COL_NAME_COLUMN_INDEX = 2;
+    private static final int STAGING_DATA_TYPE_COLUMN_INDEX = 3;
+    private static final int STAGING_COMMENT_COLUMN_INDEX = 4;
+    private static final int RAW_COL_NAME_COLUMN_INDEX = 6;
+    private static final int RAW_DATA_TYPE_COLUMN_INDEX = 7;
+    private static final int RAW_COMMENT_COLUMN_INDEX = 8;
+    private static final int INTERIM_COL_NAME_COLUMN_INDEX = 10;
+    private static final int INTERIM_DATA_TYPE_COLUMN_INDEX = 11;
+    private static final int INTERIM_COMMENT_COLUMN_INDEX = 12;
+    private static final int INTERIM_TABLENAME_INDEX = 13;
+    private static final int STAGING_RAW_AND_INTERIM_PK_INDEX = 17;
+    private static final int REFINED_PK_INDEX = 18;
+    private Sheet sheet;
+    SchemaConfig schemaConfig = new SchemaConfig();
+    private static int startingRowindex;
+    AbstractLayer layer;
+	
+	 public LayerDataParser(Sheet sheet, String sheetName) {
+		 this.sheet = sheet;
+		 String value, tableName;
+	            if(!sheetName.isEmpty() && sheet != null)
+	            	System.out.println(sheetName);
+	            for (Row row : sheet) {
+	            	if(row.getCell(TEST_CASE_COLUMN_INDEX) != null) {
+	                	value = row.getCell(TEST_CASE_COLUMN_INDEX).getStringCellValue();
+	                if(TEST_CASE_HEADER_START.equalsIgnoreCase(value) ){
+	                	startingRowindex = row.getRowNum() + 1;
+	                     setTestCaseDetails(startingRowindex);
+	                     setStagingTableStructure(startingRowindex);
+	                     setRawTableStructure(startingRowindex);
+	                     setInterimTableStructure(startingRowindex);
+	                     setStagingRawAndinterimPK(startingRowindex);
+	                     setRefinedPK(startingRowindex);
+	                     setHistoryobject(startingRowindex);
+	                }
+	                }
+	            }
+	    }
+	 
+	 private void setRawTableStructure(int rowNum) {
+		    int tableIndex = rowNum;
+		    Row row;
+	        String colName, datatype, comments;
+	        Raw raw;
+	        List<Raw> rawList = new ArrayList<>();
+	        Raw.setTableName(sheet.getRow(tableIndex++).getCell(9).getStringCellValue());
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(STAGING_DATA_TYPE_COLUMN_INDEX).getStringCellValue().isEmpty() ) {
+	        		colName = row.getCell(RAW_COL_NAME_COLUMN_INDEX).getStringCellValue();
+	        		datatype = row.getCell(RAW_DATA_TYPE_COLUMN_INDEX).getStringCellValue();
+	        		comments = row.getCell(RAW_COMMENT_COLUMN_INDEX).getStringCellValue();
+	        		raw = new Raw(colName, datatype,comments );
+	        		rawList.add(raw);
+	        	}
+	        }
+	        schemaConfig.setRaws(rawList);
+	 }
+	 
+	 private void setStagingTableStructure(int rowNum) {
+		    int tableindex = rowNum;
+		    Row row;
+	        String colName, datatype, comments;
+	        Staging staging;
+	        List<Staging> stagingList = new ArrayList<>();
+	        Staging.setTableName(sheet.getRow(tableindex++).getCell(5).getStringCellValue());
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(STAGING_DATA_TYPE_COLUMN_INDEX).getStringCellValue().isEmpty() ) {
+	        		colName = row.getCell(STAGING_COL_NAME_COLUMN_INDEX).getStringCellValue();
+	        		datatype = row.getCell(STAGING_DATA_TYPE_COLUMN_INDEX).getStringCellValue();
+	        		comments = row.getCell(STAGING_COMMENT_COLUMN_INDEX).getStringCellValue();
+	        		staging = new Staging(colName, datatype,comments );
+	        		stagingList.add(staging);
+	        	}
+	        }
+
+	        schemaConfig.setStagings(stagingList);
+		  
+	 }
+	 
+	 private void setInterimTableStructure(int rowNum) {
+	        int tableindex = rowNum;
+	        Row row;
+	        String colName, dataType, comments;
+	        Interim interims;
+	        List<Interim> interimList = new ArrayList<>();
+	        Interim.setTableName(sheet.getRow(tableindex++).getCell(INTERIM_TABLENAME_INDEX).getStringCellValue());
+	        while ((row = sheet.getRow(rowNum++)) != null) {
+	            if (!row.getCell(INTERIM_DATA_TYPE_COLUMN_INDEX).getStringCellValue().isEmpty()) {
+	                colName = row.getCell(INTERIM_COL_NAME_COLUMN_INDEX).getStringCellValue();
+	                dataType = row.getCell(INTERIM_DATA_TYPE_COLUMN_INDEX).getStringCellValue();
+	                comments = row.getCell(INTERIM_COMMENT_COLUMN_INDEX).getStringCellValue();
+	                interims = new Interim(colName, dataType, comments);
+	                interimList.add(interims);
+	            }
+	        }
+
+	        schemaConfig.setInterims(interimList);
+
+	    }
+
+	 
+	 private void setTestCaseDetails(int rowNum){
+	        Row row;
+	        String tcName;
+	        String layer;
+	        TestCaseConfig testCaseConfig;
+	        List<TestCaseConfig> testCaseList = new ArrayList<>();
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(TEST_CASE_COLUMN_INDEX).getStringCellValue().isEmpty()) {
+	        	tcName = row.getCell(TEST_CASE_COLUMN_INDEX).getStringCellValue();
+	        	layer = row.getCell(TEST_CASE_LAYER_COLUMN_INDEX).getStringCellValue();
+	          testCaseConfig = new TestCaseConfig(tcName, layer);
+	            testCaseList.add(testCaseConfig);
+	        	}
+	        }
+
+	        schemaConfig.setTestCaseConfig(testCaseList);
+	    }
+	 
+	 private void setStagingRawAndinterimPK(int rowNum) {
+		 Row row;
+	        String stagingPK;
+	        PrimaryKey pk;
+	        List<AbstractPK> PKList = new ArrayList<>();
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(STAGING_RAW_AND_INTERIM_PK_INDEX).getStringCellValue().isEmpty()) {
+	        		stagingPK = row.getCell(STAGING_RAW_AND_INTERIM_PK_INDEX).getStringCellValue();
+	        		pk = new PrimaryKey(stagingPK);
+	        		PKList.add(pk);
+	        	} 
+	        }
+	        
+		 schemaConfig.setStagingPkLists(PKList);
+	 }
+	 
+	 private void setRefinedPK(int rowNum) {
+		 Row row;
+	        String refinedPK;
+	        PrimaryKey1 pk;
+	        List<AbstractPK> PKList = new ArrayList<>();
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(REFINED_PK_INDEX).getStringCellValue().isEmpty()) {
+	        		refinedPK = row.getCell(REFINED_PK_INDEX).getStringCellValue();
+	        		pk = new PrimaryKey1(refinedPK);
+	        		PKList.add(pk);
+	        	} 
+	        }
+	        
+		 schemaConfig.setRefinedPkLists(PKList);
+	 }
+	 
+	 private void setHistoryobject(int rowNum) {
+		 Row row;
+	        String history;
+	        History his;
+	        List<History> historyList = new ArrayList<>();
+	        while ((row = sheet.getRow(rowNum++)) != null){
+	        	if(!row.getCell(19).getStringCellValue().isEmpty()) {
+	        		history = row.getCell(19).getStringCellValue();
+	        		his = new History(history);
+	        		historyList.add(his);
+	        	} 
+	        }
+	        
+		 schemaConfig.setHistoryList(historyList);
+	 }
+
+	    public SchemaConfig parse() {
+	        
+	        return schemaConfig;
+	    }
+}

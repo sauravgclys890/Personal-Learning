@@ -1,0 +1,30 @@
+
+W
+java:S3010+"#Remove this assignment of "driver".(ÁÜÑ¥8ã€‘³.H…ÇRMAJORZ
+CODE_SMELL
+i
+java:S2209Q"5Change this instance-reference to a static reference.(ÔÕñ8Ä­¨Ì³.HÓÇRMAJORZ
+CODE_SMELL
+i
+java:S2209@"5Change this instance-reference to a static reference.(ÔÕñ8‡×ú³.HÿÆRMAJORZ
+CODE_SMELL
+m
+java:S2696N"6Make the enclosing method "static" or remove this set.(ÁÜÑ¥8‡×ú³.HıÆRCRITICALZ
+CODE_SMELL
+x	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(üæ’*H÷ÆRMINORZ
+CODE_SMELL
+i
+java:S2209+"5Change this instance-reference to a static reference.(ÁÜÑ¥8‡×ú³.HşÆRMAJORZ
+CODE_SMELL
+i
+java:S2209N"5Change this instance-reference to a static reference.(ÁÜÑ¥8ã€‘³.H†ÇRMAJORZ
+CODE_SMELL
+\	java:S108D")Either remove or fill this block of code.(”ı¾8Ä­¨Ì³.HÒÇRMAJORZ
+CODE_SMELL
+_
+java:S1481M"+Remove this unused "scText" local variable.(ßƒšŠ8¶âá—³.H¬ÇRMINORZ
+CODE_SMELL
+l	java:S106;"9Replace this use of System.out or System.err by a logger.(‚œá¾8Ä­¨Ì³.HÑÇRMAJORZ
+CODE_SMELL
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›üÀ”HøÆRMINORZ
+CODE_SMELL

@@ -1,0 +1,14 @@
+
+f
+java:S2696"6Make the enclosing method "static" or remove this set.(ì©à•H³ÂRCRITICALZ
+CODE_SMELL
+‡
+java:S1104"RMake driver a static final constant or non-public and provide accessors if needed.(ÜçÁÈûÿÿÿÿH²ÂRMINORZVULNERABILITY
+r
+java:S2696&"6Make the enclosing method "static" or remove this set.(™ß£Ñýÿÿÿÿ8øçýç².H¶ÂRCRITICALZ
+CODE_SMELL
+a
+java:S1444",Make this "public static driver" field final(ÜçÁÈûÿÿÿÿH±ÂRMINORZVULNERABILITY
+m
+java:S26966"6Make the enclosing method "static" or remove this set.(Ò±ö›8ùŠñç².H´ÂRCRITICALZ
+CODE_SMELL

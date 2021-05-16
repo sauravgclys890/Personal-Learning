@@ -1,0 +1,12 @@
+package AAP.GitLabTest;
+
+public class PrimaryKey extends AbstractPK{
+	 public PrimaryKey() {
+	    }
+	 
+	 public PrimaryKey(String pkName) {
+	        super(pkName);
+	    }
+	
+	
+}

@@ -1,0 +1,9 @@
+
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›üÀ”HâÅRMINORZ
+CODE_SMELL
+^
+java:S1612",Replace this lambda with a method reference.(‚¥‚ñûÿÿÿÿHãÅRMINORZ
+CODE_SMELL
+f
+java:S1610"4Convert the abstract class "Page" into an interface.(ŞÃÍúÿÿÿÿHäÅRMINORZ
+CODE_SMELL

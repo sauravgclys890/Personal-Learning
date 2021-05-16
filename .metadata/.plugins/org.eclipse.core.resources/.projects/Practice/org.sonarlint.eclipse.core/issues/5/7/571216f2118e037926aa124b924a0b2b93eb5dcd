@@ -1,0 +1,12 @@
+
+Z
+java:S1181"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8¿ªÎ›£.HØ—RMAJORZ
+CODE_SMELL
+l	java:S106"9Replace this use of System.out or System.err by a logger.(öôÊ¡8ûØÌ›£.HÙ—RMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(‘Ô¶Œúÿÿÿÿ8ûØÌ›£.HÚ—RMAJORZ
+CODE_SMELL
+k	java:S106	"9Replace this use of System.out or System.err by a logger.(ÜÄ™g8ûØÌ›£.HÛ—RMAJORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(‰ì±Àùÿÿÿÿ8ûØÌ›£.HÜ—RMAJORZ
+CODE_SMELL

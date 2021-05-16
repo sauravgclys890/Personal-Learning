@@ -1,0 +1,19 @@
+
+\	java:S108(")Either remove or fill this block of code.(”ı¾8“Ä°¯±.Hï¹RMAJORZ
+CODE_SMELL
+c
+java:S1481!"/Remove this unused "innerJSgON" local variable.(¶…8ü«Ô»Ç.Hğ¹RMINORZ
+CODE_SMELL
+‰
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ÍİÁÉ8“Ä°¯±.Hñ¹RCRITICALZ
+CODE_SMELL
+b
+java:S1125"")Remove the literal "false" boolean value.(ç±†óÿÿÿÿÿ8äğø¯±.Hò¹RMINORZ
+CODE_SMELL
+b
+java:S1125")Remove the literal "false" boolean value.(ç±†óÿÿÿÿÿ8“Ä°¯±.Hó¹RMINORZ
+CODE_SMELL
+q	java:S106"9Replace this use of System.out or System.err by a logger.(²Æ¾¡üÿÿÿÿ8“Ä°¯±.Hô¹RMAJORZ
+CODE_SMELL
+†	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æ¥»™Hõ¹RMINORZ
+CODE_SMELL
